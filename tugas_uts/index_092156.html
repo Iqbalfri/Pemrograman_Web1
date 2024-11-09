@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ujian Tengah Semester</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .header {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #f0f0f0;
+        position: relative;
+      }
+      .header img {
+        height: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+      }
+      nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        padding: 20px 0;
+
+        align-items: center;
+        justify-content: space-between;
+      }
+      .hamburger {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .cover {
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+        background-color: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #555;
+        margin: 20px 0;
+      }
+      .info-section {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+      }
+      .info-section div {
+        width: 45%;
+      }
+      .contact-icons {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
+      .contact-icons div {
+        flex: 1;
+      }
+      .form-section {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .form-section form {
+        width: 45%;
+      }
+      .form-section form input,
+      .form-section form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .footer {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      .footer div {
+        width: 24%;
+        margin-bottom: 10px;
+      }
+      .copyright {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        background-color: #ddd;
+      }
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+        }
+        nav {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 10px;
+          background-color: #f0f0f0;
+          width: 200px;
+          border: 1px solid #ccc;
+          text-align: right;
+          padding-right: 10px;
+        }
+        .hamburger {
+          display: block;
+        }
+        .show-menu {
+          display: flex;
+        }
+        .info-section {
+          flex-direction: column;
+        }
+        .info-section div,
+        .form-section form {
+          width: 100%;
+        }
+        .form-section {
+          flex-direction: column;
+        }
+        .footer div {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="logo.jpg" alt="Logo" />
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav id="menu">
+        <a href="#">Home</a>
+        <a href="#">Course</a>
+        <a href="#">Teacher</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <img src="sepatu1.jpg" alt="" />
+
+    <div class="info-section">
+      <div>
+        <h3>Address</h3>
+        <p>Aenean sollicitudin, lorem quis bibendum auctor.</p>
+        <p>+62 (082339368812)</p>
+        <p>Iqbal@gmail.com</p>
+      </div>
+      <div>
+        <h3>Info</h3>
+        <p>Duis dignissim mi ut laoreet mollis.</p>
+        <p>Maecenas ultrices tellus sit amet sem placerat tempor.</p>
+      </div>
+    </div>
+
+    <div class="contact-icons">
+      <div>
+        <p>Icon 1</p>
+        <p>Deskripsi</p>
+      </div>
+      <div>
+        <p>Icon 2</p>
+        <p>Deskripsi</p>
+      </div>
+      <div>
+        <p>Icon 3</p>
+        <p>Deskripsi</p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <form>
+        <h2>Say hello!</h2>
+
+        <input type="text" placeholder="Your name" />
+        <input type="email" placeholder="Your email" />
+        <input type="text" placeholder="Subject" />
+        <textarea placeholder="Message"></textarea>
+      </form>
+      <div>
+        <h2>Before sending a message</h2>
+        <p>Mauris rhoncus orci in imperdiet placerat.</p>
+        <p>
+          Vestibulum euismod mi suscipit ligula volutpat, a feugiat urna
+          maximus.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>
+        <p>Home</p>
+        <p>About | FAQs | Support | Contact</p>
+      </div>
+      <div>
+        <p>Shop</p>
+        <p>Portofolio | Blog | Event | Forum</p>
+      </div>
+      <div>
+        <p>Corporate</p>
+        <p>Agency | eCommerce | Personal | One Page</p>
+      </div>
+      <div>
+        <p>About us</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>
+        © 2014 All Rights Reserved by uas Inc. | Terms of Use / Privacy Policy
+      </p>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("show-menu");
+      }
+    </script>
+  </body>
+</html>
